@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD SECTION -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>My Hobbies</title>
+    <!--GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!--BOOTSTRAP MAIN STYLES -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!--FONTAWESOME MAIN STYLE -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!--CUSTOM STYLE -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- favicon -->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <!-- Conexión con JS -->
+    <script src="hobbies.js" defer></script>
+</head>
+    <!--END HEAD SECTION -->
+<body>
+    <div class="container">
+        <div class="row centered">
+            <div class="col-md-8 col-md-offset-3">
+                <br/><br/>
+                &emsp;<a class="escritos-otros" href="index.html"><img src="./assets/img/devpersonal.png" alt="devpersonal"/></a>
+                &emsp;<a class="escritos-otros" href="./trips.html"><strong>TRIPS</strong></a>
+                &emsp;<a class="escritos-otros" href="./hobbies.html"><strong>HOBBIES</strong></a>
+                &emsp;<a class="escritos-otros" href="./me.html"><strong>ME</strong></a>
+                &emsp;&emsp;<div id="google_translate_element" class="google" style="display: inline-block;"></div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="hobby-seccion">
+            <table>
+                <tr>
+                    <th><button id="btn_on_off"><img src="./assets/img/hobbies/btn-power.png" alt="btn-power"/></button></th>
+                    <th></th>
+                    <th>My Hobbies</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td id="btn_books">Books</td>
+                    <td id="btn_cars">Cars</td>
+                    <td id="btn_chess">Chess</td>
+                    <td id="btn_gym">GYM</td>
+                    <td id="btn_padel">Padel</td>
+                </tr>
+            </table>
+            <div id="tv-container" style="display: inline-block;"></div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+   <!--FOOTER SECTION -->
+   <div id="footer">Copyright &copy; 2023-2030 - All Rights Reserved</div>
+   <!--END FOOTER SECTION --> 
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY LIBRARY -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- CORE BOOTSTRAP LIBRARY -->
+    <script src="assets/js/bootstrap.min.js"></script>
+     <!-- SCROLL REVEL LIBRARY FOR SCROLLING ANIMATIONS-->
+    <script src="assets/js/scrollReveal.js"></script>
+       <!-- CUSTOM SCRIPT-->
+    <script src="assets/js/custom.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+           new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ca,eu,gl,es,fr,it,pt,de,ar,ru,hi,sr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, autoDisplay: false}, 'google_translate_element');
+                }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
