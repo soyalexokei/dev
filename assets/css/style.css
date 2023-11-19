@@ -216,11 +216,19 @@ color: #FFFFFF;
     text-align: center;
 }
 
-#tv-container {
-    background-image: url('../img/hobbies/display-white.png');
-    width: 640px;
-    height: 640px;
+.tv-container {
+    display: flex;
+    align-items: center;
     justify-content: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.mobile-screen {
+    position: absolute;
+    top: 99px;
+    left: 26px;
 }
 
 #pantalla {
