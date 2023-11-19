@@ -1,21 +1,44 @@
-const screen = document.getElementById('tv-container');
-const btnPower = document.getElementById('btn_on_off');
+document.addEventListener("DOMContentLoaded", function () {
 
-screen.width=320;
-screen.height=600;
+    const screen = document.getElementById('pantalla');
+    const contexto = canvas.getContext("2d");
 
-const TEST_IMAGE_URL = "../img/hobbies/no-signal.png";
+    //-- Definir el tamaño del canvas.
+    screen.width = 256;
+    screen.height = 446;
 
-btnPower.onclick = () => {
+    // Lista de URLs de imágenes
+    var imageUrls = [
+        "../img/hobbies/no-signal.png",
+        "../img/hobbies/nike.png"
+    ];
 
-    //-- Establecer la fuente de la cámara 1
-    video1.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente1.mp4";
+    // Cargar imágenes
+    var images = [];
+    var cont = 0;
 
-    //-- Reprodeucimos un vídeo, desde el comienzo
-    video1.currentTime = 0;
-    video1.play();
+    function loadImages() {
+        for (var i = 0; i < imageUrls.length; i++) {
+            var img = new Image();
+            img.src = imageUrls[i];
+            images.push(img);
+        }
+    }
 
-    //-- Y en silencio...
-    video1.muted;
-    screen.poster = TEST_IMAGE_URL;
-}
+    // Dibujar la imagen actual en el canvas
+    function drawImage() {
+        contexto.clearRect(0, 0, screen.width, screen.height);
+        contexto.drawImage(images[cont], 0, 0, screen.width, screen.height);
+    }
+
+    // Cambiar a la siguiente imagen cada segundo
+    function changeImage() {
+        cont = (cont + 1) % images.length;
+        drawImage();
+    }
+
+    // Cargar imágenes y comenzar la animación
+    loadImages();
+    drawImage();
+    setInterval(changeImage, 1000);
+});

@@ -223,6 +223,10 @@ color: #FFFFFF;
     justify-content: center;
 }
 
+#pantalla {
+    background-color: transparent;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
